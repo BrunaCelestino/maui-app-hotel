@@ -48,19 +48,19 @@ O aplicativo permite:
 ## Capturas de tela
 
 ### Tela inicial - cálculo da diária
-![Cálculo da diária](funcionamento/calculo-diaria.png)
+![Cálculo da diária](funcionamento/calculo-diaria.PNG)
 
 ### Validação de hóspede selecionado
-![Validação hóspede](funcionamento/validacao-hospede-selecionado.png)
+![Validação hóspede](funcionamento/validacao-hospede-selecionado.PNG)
 
 ### Validação de quarto selecionado
-![Validação quarto](funcionamento/validacao-quarto-selecionado.png)
+![Validação quarto](funcionamento/validacao-quarto-selecionado.PNG)
 
 ### Reserva confirmada
-![Reserva confirmada](funcionamento/reserva-confirmada.png)
+![Reserva confirmada](funcionamento/reserva-confirmada.PNG)
 
 ### Tela Sobre
-![Tela Sobre](funcionamento/sobre.png)
+![Tela Sobre](funcionamento/sobre.PNG)
 
 ## Tecnologias utilizadas
 
