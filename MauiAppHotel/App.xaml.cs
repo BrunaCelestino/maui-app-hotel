@@ -10,25 +10,34 @@ namespace MauiAppHotel
             {
                 Descricao = "Suíte Super Luxo",
                 ValorDiariaAdulto = 110.0,
-                ValorDiariaCrianca = 55.0
+                ValorDiariaCrianca = 55.0,
+                Imagem = "superluxo.jpg",
+                DescricaoCompleta = "Suíte premium com hidromassagem e vista panorâmica."
             },
             new Quarto()
             {
                 Descricao = "Suíte Luxo",
                 ValorDiariaAdulto = 80.0,
-                ValorDiariaCrianca = 40.0
+                ValorDiariaCrianca = 40.0,
+                Imagem = "luxo.jpg",
+                DescricaoCompleta = "Quarto sofisticado com muito conforto."
             },
             new Quarto()
             {
                 Descricao = "Suíte Single",
                 ValorDiariaAdulto = 50,
-                ValorDiariaCrianca = 25
+                ValorDiariaCrianca = 25,
+                Imagem = "single.jpg",
+                DescricaoCompleta = "Ideal para viagens rápidas e econômicas."
+
             },
             new Quarto()
             {
                 Descricao = "Suíte Crise",
                 ValorDiariaAdulto = 25,
-                ValorDiariaCrianca = 12.5
+                ValorDiariaCrianca = 12.5,
+                Imagem = "crise.jpg",
+                DescricaoCompleta = "Acomodação econômica para descansar gastando pouco."
             }
         };
 
@@ -36,7 +45,7 @@ namespace MauiAppHotel
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.ContratacaoHospedagem());
+            MainPage = new NavigationPage(new Views.PaginaInicial());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

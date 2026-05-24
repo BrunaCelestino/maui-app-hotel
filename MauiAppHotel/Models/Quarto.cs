@@ -11,5 +11,7 @@ namespace MauiAppHotel.Models
         public string Descricao { get; set; }
         public double ValorDiariaAdulto { get; set; }
         public double ValorDiariaCrianca { get; set; }
+        public string Imagem { get; set; }
+        public string DescricaoCompleta { get; set; }
     }
 }
