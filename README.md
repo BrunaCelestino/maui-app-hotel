@@ -4,13 +4,7 @@ Projeto desenvolvido em **.NET MAUI** como atividade prática para criação de 
 
 ## Objetivo da atividade
 
-A proposta foi:
-
-- Desenvolver o layout apresentado no material da disciplina;
-- Personalizar o layout com identidade visual própria;
-- Criar uma nova tela chamada **Sobre**;
-- Adicionar informações do desenvolvedor, como nome e ano de desenvolvimento;
-- Disponibilizar o projeto no GitHub junto das capturas de tela.
+Após codificar todo o projeto, execute alterações em seu design, como alteração de cores, inserção de telas e outros recursos de sua escolha.
 
 ## Personalizações realizadas
 
@@ -21,6 +15,9 @@ Durante o desenvolvimento, foram realizadas melhorias visuais e funcionais:
 - Reformulação completa do layout para visual mais moderno;
 - Padronização visual entre todas as telas;
 - Criação da tela **Sobre o Desenvolvedor**;
+- Criação de **Página Inicial**;
+- Criação de **Página Detalhes do Quarto**;
+- Ao acessar a página de detalhes de um quarto e então clicar em "Contratar Hospedagem", o seletor de suíte é pré-carregado com o nome do quarto que o usuário estava visualizando.
 - Adição de foto do desenvolvedor em formato circular;
 - Inclusão de informações como nome, ano de desenvolvimento, tecnologia e contato;
 - Implementação de validações antes da confirmação da hospedagem.
@@ -38,6 +35,8 @@ Foram adicionadas validações para melhorar a experiência do usuário e evitar
 
 O aplicativo permite:
 
+- Ver todas as suítes;
+- Ver detalhes da suíte escolhida;
 - Selecionar quantidade de adultos e crianças;
 - Escolher suíte;
 - Selecionar período de hospedagem;
@@ -47,19 +46,29 @@ O aplicativo permite:
 
 ## Capturas de tela
 
-### Tela inicial - cálculo da diária
-![Cálculo da diária](funcionamento/calculo-diaria.PNG)
+### 1) Tela inicial
+![Tela inicial](funcionamento/pagina-inicial.PNG)
+![Seleção suíte 1](funcionamento/suites-pagina-inicial-1.PNG)
+![Seleção suíte 2](funcionamento/suites-pagina-inicial-2.PNG)
+![Seleção suíte 3](funcionamento/suites-pagina-inicial-3.PNG)
 
-### Validação de hóspede selecionado
+### 2) Detalhe do quarto
+![Detalhe do quarto](funcionamento/pagina-detalhe-quarto.PNG)
+
+### 3) Cálculo da diária (click a partir da Página Inicial)
+![Cálculo - página inicial](funcionamento/calculo-diaria-selecionado-pagina-inicial.PNG)
+
+### 4) Cálculo da diária (click a partir de Detalhe do Quarto)
+![Cálculo - detalhe do quarto](funcionamento/calculo-diaria-selecionado-detalhe-quarto.PNG)
+
+### 5) Validações antes da confirmação
 ![Validação hóspede](funcionamento/validacao-hospede-selecionado.PNG)
-
-### Validação de quarto selecionado
 ![Validação quarto](funcionamento/validacao-quarto-selecionado.PNG)
 
-### Reserva confirmada
+### 6) Reserva confirmada
 ![Reserva confirmada](funcionamento/reserva-confirmada.PNG)
 
-### Tela Sobre
+### 7) Tela Sobre
 ![Tela Sobre](funcionamento/sobre.PNG)
 
 ## Tecnologias utilizadas
