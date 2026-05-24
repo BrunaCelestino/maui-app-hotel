@@ -48,8 +48,11 @@ O aplicativo permite:
 
 ### 1) Tela inicial
 ![Tela inicial](funcionamento/pagina-inicial.PNG)
+ 
 ![Seleção suíte 1](funcionamento/suites-pagina-inicial-1.PNG)
+
 ![Seleção suíte 2](funcionamento/suites-pagina-inicial-2.PNG)
+
 ![Seleção suíte 3](funcionamento/suites-pagina-inicial-3.PNG)
 
 ### 2) Detalhe do quarto
@@ -63,6 +66,7 @@ O aplicativo permite:
 
 ### 5) Validações antes da confirmação
 ![Validação hóspede](funcionamento/validacao-hospede-selecionado.PNG)
+
 ![Validação quarto](funcionamento/validacao-quarto-selecionado.PNG)
 
 ### 6) Reserva confirmada
