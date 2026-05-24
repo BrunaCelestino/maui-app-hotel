@@ -4,19 +4,44 @@ namespace MauiAppHotel.Views;
 
 public partial class ContratacaoHospedagem : ContentPage
 {
-    App PropriedadesApp;
+    List<Quarto> lista_quartos = new();
+
 
     public ContratacaoHospedagem()
     {
         InitializeComponent();
+        CarregarQuartos();
+        CarregarCalendarios();
 
-        PropriedadesApp = (App)Application.Current;
 
-        pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
+    }
 
+    public ContratacaoHospedagem(Quarto quartoSelecionado)
+    {
+        InitializeComponent();
+
+        CarregarQuartos();
+        CarregarCalendarios();
+
+        int indice = lista_quartos.FindIndex(
+            q => q.Descricao == quartoSelecionado.Descricao);
+
+        if (indice >= 0)
+        {
+            pck_quarto.SelectedIndex = indice;
+        }
+    }
+
+    private void CarregarQuartos()
+    {
+        lista_quartos = ((App)Application.Current).lista_quartos;
+        pck_quarto.ItemsSource = lista_quartos;
+    }
+
+    private void CarregarCalendarios()
+    {
         dtpck_checkin.MinimumDate = DateTime.Now;
         dtpck_checkin.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
-
         dtpck_checkout.MinimumDate = (dtpck_checkin.Date ?? DateTime.Now).AddDays(1);
         dtpck_checkout.MaximumDate = (dtpck_checkin.Date ?? DateTime.Now).AddMonths(6);
     }
@@ -27,7 +52,7 @@ public partial class ContratacaoHospedagem : ContentPage
         {
             Hospedagem h = new Hospedagem
             {
-                QuartoSelecionado = (Quarto)pck_quarto.SelectedItem,
+                QuartoSelecionado = (Quarto) pck_quarto.SelectedItem,
                 QntAdultos = Convert.ToInt32(stp_adultos.Value),
                 QntCriancas = Convert.ToInt32(stp_criancas.Value),
                 DataCheckIn = (DateTime) dtpck_checkin.Date,
@@ -58,17 +83,6 @@ public partial class ContratacaoHospedagem : ContentPage
         }
     }
 
-    private async void Sobre_Clicked(object sender, EventArgs e)
-    {
-        try
-        {
-            await Navigation.PushAsync(new SobreDesenvolvedor());
-        } 
-        catch (Exception ex)
-        {
-            await DisplayAlert("Ops", ex.Message, "OK");
-        }
-    }
     private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
     {
         DatePicker elemento = sender as DatePicker;
@@ -77,5 +91,10 @@ public partial class ContratacaoHospedagem : ContentPage
 
         dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
         dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
+    }
+
+    private void Button_Back_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PopAsync();
     }
 }

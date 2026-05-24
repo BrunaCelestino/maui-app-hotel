@@ -88,21 +88,10 @@
                         </HorizontalStackLayout>
                     </VerticalStackLayout>
                 </Frame>
-
-                <Button Text="Avançar" Clicked="Button_Clicked"   />
-
-                <Label
-                     Text="Sobre"
-                     FontSize="14"
-                     TextColor="{StaticResource Primary}"
-                     HorizontalOptions="Center"
-                     FontAttributes="Bold"
-                     TextDecorations="Underline"
-                     Margin="0,10,0,0">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="Sobre_Clicked"/>
-                    </Label.GestureRecognizers>
-                </Label>
+                <VerticalStackLayout Spacing="10">
+                    <Button Text="Avançar" Clicked="Button_Clicked"/>
+                    <Button Text="Voltar" Clicked="Button_Back_Clicked" />
+                </VerticalStackLayout>
             </VerticalStackLayout>
             
         </Frame>
